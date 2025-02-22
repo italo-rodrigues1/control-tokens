@@ -20,9 +20,12 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@azure/functions": "^4.6.1",
     "@azure/identity": "^4.6.0",
     "@azure/keyvault-secrets": "^4.9.0",
+    "@azure/storage-queue": "^12.25.0",
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^11.0.1",
