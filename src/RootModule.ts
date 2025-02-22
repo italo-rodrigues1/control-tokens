@@ -4,9 +4,20 @@ import { QueueModule } from './queue/queue.module';
 import { ChatModule } from './chat/chat.module';
 import { TokenManagerModule } from './token-manager/token-manager.module';
 import { OpenaiModule } from './openai/openai.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ChatModule, CronModule, QueueModule, TokenManagerModule, OpenaiModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env.development',
+    }),
+    ChatModule,
+    CronModule,
+    QueueModule,
+    TokenManagerModule,
+    OpenaiModule,
+  ],
   controllers: [],
   providers: [],
 })
